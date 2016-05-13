@@ -29,7 +29,7 @@ values."
      markdown
      org
      (shell :variables
-            shell-default-shell 'ansi-term) 
+            shell-default-shell 'ansi-term)
      syntax-checking
      osx
      (ruby :variables
@@ -43,6 +43,7 @@ values."
      go
      html
      php
+     themes-megapack
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -103,7 +104,10 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(zenburn
+   dotspacemacs-themes '(sanityinc-tomorrow-night
+                         base16-eighties-dark
+                         flatland
+                         zenburn
                          spacemacs-dark
                          solarized-dark
                          monokai)
@@ -115,7 +119,7 @@ values."
                                :size 14
                                :weight normal
                                :width normal
-                               :powerline-scale 1.2)
+                               :powerline-scale 1.1)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The leader key accessible in `emacs state' and `insert state'
@@ -235,7 +239,7 @@ values."
    ;; `trailing' to delete only the whitespace at end of lines, `changed'to
    ;; delete only whitespace for changed lines or `nil' to disable cleanup.
    ;; (default nil)
-   dotspacemacs-whitespace-cleanup nil
+   dotspacemacs-whitespace-cleanup `trailing
    ))
 
 (defun dotspacemacs/user-init ()
@@ -262,13 +266,14 @@ you should place your code here."
    ;; js2-mode
    js2-basic-offset 2
    ;; web-mode
-   css-indent-offset 2
+   ;; css-indent-offset 2
    web-mode-markup-indent-offset 2
-   web-mode-css-indent-offset 2
+   ;; web-mode-css-indent-offset 2
    web-mode-code-indent-offset 2
    web-mode-attr-indent-offset 2)
 
-  ;; (setq powerline-default-separator 'brace)
+  (setq powerline-default-separator 'alternate)
+  ;; (setq ns-use-srgb-colorspace nil)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
