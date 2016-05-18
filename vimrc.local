@@ -40,3 +40,5 @@ let g:ctrlp_abbrev = {
     \ ]
   \ }
 
+" Use the OS X clipboard.
+set clipboard=unnamed

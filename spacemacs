@@ -38,12 +38,12 @@ values."
      ruby-on-rails
      yaml
      elixir
-     javascript
-     rust
-     go
+     ;; javascript
+     ;; rust
+     ;; go
      html
      php
-     themes-megapack
+     ;; themes-megapack
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -104,9 +104,7 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(sanityinc-tomorrow-night
-                         base16-eighties-dark
-                         flatland
+   dotspacemacs-themes '(base16-eighties-dark
                          zenburn
                          spacemacs-dark
                          solarized-dark
@@ -266,13 +264,13 @@ you should place your code here."
    ;; js2-mode
    js2-basic-offset 2
    ;; web-mode
-   ;; css-indent-offset 2
+   css-indent-offset 2
    web-mode-markup-indent-offset 2
-   ;; web-mode-css-indent-offset 2
+   web-mode-css-indent-offset 2
    web-mode-code-indent-offset 2
    web-mode-attr-indent-offset 2)
 
-  (setq powerline-default-separator 'alternate)
+  (setq powerline-default-separator 'bar)
   ;; (setq ns-use-srgb-colorspace nil)
   )
 

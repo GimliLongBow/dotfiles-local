@@ -1,0 +1,13 @@
+# Git
+alias gst='git status'
+alias ga='git add'
+alias gc='git checkout'
+alias gb='git branch'
+alias gbc='git checkout -b'
+alias gd='git diff'
+alias gl='git pull'
+alias gp='git push'
+
+# Typewriter
+alias tw='cd ~/Sites/typewriter-2'
+alias twt='cd ~/Sites/typewriter/themes'
