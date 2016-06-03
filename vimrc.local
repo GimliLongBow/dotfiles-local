@@ -1,7 +1,7 @@
 " Configure UI 
 set background=dark
-let base16colorspace=256
-colorscheme base16-default
+" let base16colorspace=256
+colorscheme flatlandia
 set nofoldenable                " disable code folding
 
 " iTerm2
