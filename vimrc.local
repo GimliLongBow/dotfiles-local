@@ -1,8 +1,8 @@
 " Configure UI 
-set background=dark
+" set background=dark
 " let base16colorspace=256
-colorscheme flatlandia
-set nofoldenable                " disable code folding
+" colorscheme flatland
+" set nofoldenable                " disable code folding
 
 " iTerm2
 if $TERM_PROGRAM =~ "iTerm"
@@ -12,22 +12,22 @@ endif
 
 " Disable column and fixed column width
 set textwidth=0
-set colorcolumn=
+" set colorcolumn=
 
 " Incsearch
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
+" map /  <Plug>(incsearch-forward)
+" map ?  <Plug>(incsearch-backward)
+" map g/ <Plug>(incsearch-stay)
 
 " CtrlSF
-nmap     <C-F>f <Plug>CtrlSFPrompt
-vmap     <C-F>f <Plug>CtrlSFVwordPath
-vmap     <C-F>F <Plug>CtrlSFVwordExec
-nmap     <C-F>n <Plug>CtrlSFCwordPath
-nmap     <C-F>p <Plug>CtrlSFPwordPath
-nnoremap <C-F>o :CtrlSFOpen<CR>
-nnoremap <C-F>t :CtrlSFToggle<CR>
-inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
+" nmap     <C-F>f <Plug>CtrlSFPrompt
+" vmap     <C-F>f <Plug>CtrlSFVwordPath
+" vmap     <C-F>F <Plug>CtrlSFVwordExec
+" nmap     <C-F>n <Plug>CtrlSFCwordPath
+" nmap     <C-F>p <Plug>CtrlSFPwordPath
+" nnoremap <C-F>o :CtrlSFOpen<CR>
+" nnoremap <C-F>t :CtrlSFToggle<CR>
+" inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
 
 let g:ctrlp_abbrev = {
   \ 'gmode': 'i',

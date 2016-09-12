@@ -4,7 +4,6 @@ Customizations based upon the [thoughtbot dotfiles](https://github.com/thoughtbo
 
 ## Installation
 
-- Clone my fork of the [dotfiles](https://github.com/GimliLongBow/dotfiles) and run the basic commands.
-- Clone this repo and run `rcup` again.
-- Install any environment variables to `~/.zshenv.local`.
+- Clone this repo to `~/.dotfiles` and run `rcup -d ~/.dotfiles`.
+- Install any environment variables to `~/.zshenv`.
 - :moneybag: PROFIT :moneybag:

@@ -1,0 +1,33 @@
+# Unix
+alias ll="ls -al"
+alias ln="ln -v"
+alias mkdir="mkdir -p"
+alias e="$EDITOR"
+alias v="$VISUAL"
+
+# Bundler
+alias b="bundle"
+
+# Rails
+alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
+alias s="rspec"
+
+# Pretty print the path
+alias path='echo $PATH | tr -s ":" "\n"'
+
+# Git
+alias gst='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gb='git branch'
+alias gbc='git checkout -b'
+alias gd='git diff'
+alias gl='git pull'
+alias gp='git push'
+
+# Typewriter
+alias tw='cd ~/Sites/typewriter-2'
+alias twt='cd ~/Sites/typewriter/themes'
+
+# Emacs
+alias emc='emacsclient -t -c -a ""'
