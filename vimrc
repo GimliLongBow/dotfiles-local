@@ -9,6 +9,8 @@ set history=50
 set ruler         " show the cursor position all the time
 set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
+set hlsearch      " Highlight search terms
+set ignorecase    " Case insensitive search
 set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
 
@@ -59,6 +61,9 @@ set expandtab
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
 
+" Strip extra whitespace
+autocmd BufWritePre * StripWhitespace
+
 " Use one space, not two, after punctuation.
 set nojoinspaces
 
@@ -104,6 +109,8 @@ inoremap <S-Tab> <c-n>
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
+
+" Other buffer management stuff:
 
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
@@ -157,10 +164,10 @@ set diffopt+=vertical
 
 " Custom configuration
 
-" Configure UI 
-" set background=dark
+" Configure UI
+set background=dark
 " let base16colorspace=256
-" colorscheme flatland
+colorscheme gruvbox
 " set nofoldenable                " disable code folding
 
 " iTerm2
@@ -188,6 +195,9 @@ set textwidth=0
 " nnoremap <C-F>t :CtrlSFToggle<CR>
 " inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
 
+" CtrlP
+nnoremap <leader>bb :CtrlPBuffer<CR>
+nnoremap <leader>pf :CtrlPMixed<CR>
 let g:ctrlp_abbrev = {
   \ 'gmode': 'i',
   \ 'abbrevs': [
@@ -198,6 +208,27 @@ let g:ctrlp_abbrev = {
     \ },
     \ ]
   \ }
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+
+" Fugitive
+if isdirectory(expand("~/.vim/bundle/vim-fugitive/"))
+  nnoremap <silent> <leader>gs :Gstatus<CR>
+  nnoremap <silent> <leader>gd :Gdiff<CR>
+  nnoremap <silent> <leader>gc :Gcommit<CR>
+  nnoremap <silent> <leader>gb :Gblame<CR>
+  nnoremap <silent> <leader>gl :Glog<CR>
+  nnoremap <silent> <leader>gp :Git push<CR>
+  nnoremap <silent> <leader>gr :Gread<CR>
+  nnoremap <silent> <leader>gw :Gwrite<CR>
+  nnoremap <silent> <leader>ge :Gedit<CR>
+  " Mnemonic _i_nteractive
+  nnoremap <silent> <leader>gi :Git add -p %<CR>
+  nnoremap <silent> <leader>gg :SignifyToggle<CR>
+endif
+
+" NERDTree
+nnoremap <leader>pt :NERDTreeToggle<CR>
 
 " Use the OS X clipboard.
 set clipboard=unnamed

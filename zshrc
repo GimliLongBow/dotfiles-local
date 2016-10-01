@@ -15,7 +15,7 @@ DEFAULT_USER="andrew"
 export PATH="$HOME/.bin:$HOME/bin:$HOME/.rbenv/bin:/usr/local/heroku/bin:/usr/local/sbin:$PATH"
 
 # Set up Emacs as the editor.
-export VISUAL='emacsclient -t -c -a ""'
+export VISUAL='vim'
 export EDITOR="$VISUAL"
 
 # Enable the Android SDK:

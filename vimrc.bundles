@@ -46,7 +46,8 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby'
-Plug 'vim-scripts/tComment'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
 
 " My custom plugs!
 Plug 'elixir-lang/vim-elixir'
@@ -55,7 +56,9 @@ Plug 'haya14busa/incsearch.vim'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'bling/vim-airline'
-Plug 'jordwalke/flatlandia'
-Plug 'vivkin/flatland.vim'
+Plug 'morhetz/gruvbox'
+Plug 'myusuf3/numbers.vim'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'easymotion/vim-easymotion'
 
 call plug#end()

@@ -8,6 +8,10 @@ set guioptions-=T
 set guioptions+=c
 
 " Set font
-if has('gui_running')
-  set guifont=Source\ Code\ Pro:h14
+if has("gui_running")
+  set guifont=Fira\ Code:h14
 endif
+
+" No blinky
+set gcr=n:blinkon0
+
