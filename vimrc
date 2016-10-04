@@ -108,7 +108,7 @@ inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <S-Tab> <c-n>
 
 " Switch between the last two files
-nnoremap <leader><leader> <c-^>
+"nnoremap <leader><leader> <c-^>
 
 " Other buffer management stuff:
 
@@ -119,11 +119,11 @@ nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
 " vim-test mappings
-nnoremap <silent> <Leader>t :TestFile<CR>
-nnoremap <silent> <Leader>s :TestNearest<CR>
-nnoremap <silent> <Leader>l :TestLast<CR>
-nnoremap <silent> <Leader>a :TestSuite<CR>
-nnoremap <silent> <leader>gt :TestVisit<CR>
+"nnoremap <silent> <Leader>t :TestFile<CR>
+"nnoremap <silent> <Leader>s :TestNearest<CR>
+"nnoremap <silent> <Leader>l :TestLast<CR>
+"nnoremap <silent> <Leader>a :TestSuite<CR>
+"nnoremap <silent> <leader>gt :TestVisit<CR>
 
 " Run commands that require an interactive shell
 nnoremap <Leader>r :RunInInteractiveShell<space>
@@ -134,12 +134,6 @@ let g:html_indent_tags = 'li\|p'
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
-
-" Quicker window movement
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>l
 
 " configure syntastic syntax checking to check on open as well as save
 let g:syntastic_check_on_open=1
@@ -157,16 +151,8 @@ set complete+=kspell
 " Always use vertical diffs
 set diffopt+=vertical
 
-" Local config
-"if filereadable($HOME . "/.vimrc.local")
-"  source ~/.vimrc.local
-"endif
-
-" Custom configuration
-
 " Configure UI
 set background=dark
-" let base16colorspace=256
 colorscheme gruvbox
 " set nofoldenable                " disable code folding
 
@@ -180,55 +166,7 @@ endif
 set textwidth=0
 " set colorcolumn=
 
-" Incsearch
-" map /  <Plug>(incsearch-forward)
-" map ?  <Plug>(incsearch-backward)
-" map g/ <Plug>(incsearch-stay)
-
-" CtrlSF
-" nmap     <C-F>f <Plug>CtrlSFPrompt
-" vmap     <C-F>f <Plug>CtrlSFVwordPath
-" vmap     <C-F>F <Plug>CtrlSFVwordExec
-" nmap     <C-F>n <Plug>CtrlSFCwordPath
-" nmap     <C-F>p <Plug>CtrlSFPwordPath
-" nnoremap <C-F>o :CtrlSFOpen<CR>
-" nnoremap <C-F>t :CtrlSFToggle<CR>
-" inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
-
-" CtrlP
-nnoremap <leader>bb :CtrlPBuffer<CR>
-nnoremap <leader>pf :CtrlPMixed<CR>
-let g:ctrlp_abbrev = {
-  \ 'gmode': 'i',
-  \ 'abbrevs': [
-    \ {
-      \ 'pattern': ' ',
-      \ 'expanded': '',
-      \ 'mode': 'pfrz',
-    \ },
-    \ ]
-  \ }
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-
-" Fugitive
-if isdirectory(expand("~/.vim/bundle/vim-fugitive/"))
-  nnoremap <silent> <leader>gs :Gstatus<CR>
-  nnoremap <silent> <leader>gd :Gdiff<CR>
-  nnoremap <silent> <leader>gc :Gcommit<CR>
-  nnoremap <silent> <leader>gb :Gblame<CR>
-  nnoremap <silent> <leader>gl :Glog<CR>
-  nnoremap <silent> <leader>gp :Git push<CR>
-  nnoremap <silent> <leader>gr :Gread<CR>
-  nnoremap <silent> <leader>gw :Gwrite<CR>
-  nnoremap <silent> <leader>ge :Gedit<CR>
-  " Mnemonic _i_nteractive
-  nnoremap <silent> <leader>gi :Git add -p %<CR>
-  nnoremap <silent> <leader>gg :SignifyToggle<CR>
-endif
-
-" NERDTree
-nnoremap <leader>pt :NERDTreeToggle<CR>
-
 " Use the OS X clipboard.
 set clipboard=unnamed
+
+let g:better_whitespace_filetypes_blacklist=['leaderGuide', 'diff', 'gitcommit', 'unite', 'qf', 'help']
