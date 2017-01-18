@@ -24,6 +24,8 @@ alias gbc='git checkout -b'
 alias gd='git diff'
 alias gl='git pull'
 alias gp='git push'
+alias gamend='git commit --amend --no-edit'
+alias gpatch='git add -p'
 
 # Typewriter
 alias tw='cd ~/Sites/typewriter-2'

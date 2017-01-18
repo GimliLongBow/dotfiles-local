@@ -170,3 +170,4 @@ set textwidth=0
 set clipboard=unnamed
 
 let g:better_whitespace_filetypes_blacklist=['leaderGuide', 'diff', 'gitcommit', 'unite', 'qf', 'help']
+let g:alchemist_tag_disable = 1
