@@ -11,6 +11,30 @@ alias b="bundle"
 # Rails
 alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
 alias s="rspec"
+alias rc='rails console'
+alias devlog='tail -f log/development.log'
+alias prodlog='tail -f log/production.log'
+alias testlog='tail -f log/test.log'
+
+# Rake aliases
+alias rdm='rake db:migrate'
+alias rdms='rake db:migrate:status'
+alias rdr='rake db:rollback'
+alias rdc='rake db:create'
+alias rds='rake db:seed'
+alias rdd='rake db:drop'
+alias rdrs='rake db:reset'
+alias rdtc='rake db:test:clone'
+alias rdtp='rake db:test:prepare'
+alias rdmtc='rake db:migrate db:test:clone'
+alias rdsl='rake db:schema:load'
+alias rlc='rake log:clear'
+alias rn='rake notes'
+alias rr='rake routes'
+alias rrg='rake routes | grep'
+alias rt='rake test'
+alias rmd='rake middleware'
+alias rsts='rake stats'
 
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
@@ -23,6 +47,7 @@ alias gb='git branch'
 alias gbc='git checkout -b'
 alias gd='git diff'
 alias gl='git pull'
+alias gf='git fetch'
 alias gp='git push'
 alias gamend='git commit --amend --no-edit'
 alias gpatch='git add -p'

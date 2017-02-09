@@ -9,7 +9,8 @@ set guioptions+=c
 
 " Set font
 if has("gui_running")
-  set guifont=Fira\ Code\ Retina:h14
+  set guifont=Hasklig:h13
+  colorscheme gruvbox
 endif
 
 " No blinky
