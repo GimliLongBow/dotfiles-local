@@ -152,8 +152,15 @@ set complete+=kspell
 set diffopt+=vertical
 
 " Configure UI
+"set background=dark
+"colorscheme gruvbox
+
+" Theme
+syntax enable
+set t_Co=256
+colorscheme OceanicNext
 set background=dark
-colorscheme gruvbox
+
 " set nofoldenable                " disable code folding
 
 " iTerm2
@@ -171,3 +178,5 @@ set clipboard=unnamed
 
 let g:better_whitespace_filetypes_blacklist=['leaderGuide', 'diff', 'gitcommit', 'unite', 'qf', 'help']
 let g:alchemist_tag_disable = 1
+
+let g:airline_powerline_fonts = 1

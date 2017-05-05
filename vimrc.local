@@ -1,4 +1,4 @@
-" Configure UI 
+" Configure UI
 " set background=dark
 " let base16colorspace=256
 " colorscheme flatland
@@ -42,3 +42,4 @@ let g:ctrlp_abbrev = {
 
 " Use the OS X clipboard.
 set clipboard=unnamed
+

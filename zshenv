@@ -9,3 +9,5 @@ export EDITOR="$VISUAL"
 export ANDROID_HOME=/usr/local/opt/android-sdkexport
 export PATH="$HOME/.bin:$HOME/bin:$HOME/.rbenv/bin:/usr/local/heroku/bin:/usr/local/sbin:$PATH"
 
+# 256
+export TERM="xterm-256color"

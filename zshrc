@@ -30,3 +30,5 @@ BULLETTRAIN_PROMPT_ORDER=(
   git
 )
 BULLETTRAIN_DIR_EXTENDED=0
+export PATH="/usr/local/opt/node@4/bin:$PATH"
+export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"

@@ -9,8 +9,10 @@ set guioptions+=c
 
 " Set font
 if has("gui_running")
+  set macligatures
   set guifont=Hasklig:h13
-  colorscheme gruvbox
+  colorscheme OceanicNext
+  set background=dark
 endif
 
 " No blinky
