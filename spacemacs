@@ -37,7 +37,7 @@ values."
           git-magit-status-fullscreen t
           magit-revision-show-gravatars t)
      html
-     ;; javascript
+     javascript
      markdown
      org
      osx
@@ -126,8 +126,8 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
-                         base16-oceanicnext
                          base16-eighties
+                         base16-oceanicnext
                          flatland
                          spacemacs-dark)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
@@ -257,7 +257,7 @@ values."
    ;; If non-nil line numbers are turned on in all `prog-mode' and `text-mode'
    ;; derivatives. If set to `relative', also turns on relative line numbers.
    ;; (default nil)
-   dotspacemacs-line-numbers 't
+   dotspacemacs-line-numbers 'relative
    ;; Code folding method. Possible values are `evil' and `origami'.
    ;; (default 'evil)
    dotspacemacs-folding-method 'evil
@@ -274,7 +274,7 @@ values."
    dotspacemacs-highlight-delimiters 'all
    ;; If non-nil, advise quit functions to keep server open when quitting.
    ;; (default nil)
-   dotspacemacs-persistent-server nil
+   dotspacemacs-persistent-server t
    ;; List of search tool executable names. Spacemacs uses the first installed
    ;; tool of the list. Supported tools are `rg', `ag', `pt', `ack' and `grep'.
    ;; (default '("rg" "ag" "pt" "ack" "grep"))
@@ -307,10 +307,11 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  (setq powerline-default-separator 'box)
+  ;; (setq ns-use-srgb-colorspace nil)
+  (setq powerline-default-separator 'utf-8)
   (editorconfig-mode 1)
   (add-to-list 'auto-mode-alist '("\\.ctp\\'" . web-mode))
-  (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
+  ;; (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
   ;; (global-evil-mc-mode)
   (fset 'evil-visual-update-x-selection 'ignore)
 
@@ -354,7 +355,7 @@ Version 2017-02-02"
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (yaml-mode ws-butler winum which-key web-mode volatile-highlights vi-tilde-fringe uuidgen use-package toc-org tagedit sql-indent spaceline powerline smeargle slim-mode sass-mode rvm ruby-tools ruby-test-mode rubocop rspec-mode robe reveal-in-osx-finder restart-emacs rbenv rake rainbow-delimiters pug-mode popwin phpunit phpcbf php-extras php-auto-yasnippets persp-mode pcre2el pbcopy paradox spinner osx-trash osx-dictionary orgit org-projectile org-present org-pomodoro alert log4e gntp org-plus-contrib org-download org-bullets open-junk-file oceanic-theme neotree move-text mmm-mode minitest markdown-toc markdown-mode magit-gitflow macrostep lorem-ipsum linum-relative link-hint less-css-mode launchctl info+ indent-guide hydra hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-gitignore request helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag haml-mode google-translate golden-ratio gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md fuzzy flx-ido flx flatland-theme fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit magit magit-popup git-commit with-editor evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight emmet-mode elisp-slime-nav editorconfig dumb-jump f s drupal-mode php-mode diminish company-web web-completion-data company-statistics company column-enforce-mode clean-aindent-mode chruby bundler inf-ruby bind-map bind-key auto-yasnippet yasnippet auto-highlight-symbol auto-compile packed dash aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core async ac-ispell auto-complete popup base16-theme))))
+    (web-beautify livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc company-tern dash-functional tern coffee-mode yaml-mode ws-butler winum which-key web-mode volatile-highlights vi-tilde-fringe uuidgen use-package toc-org tagedit sql-indent spaceline powerline smeargle slim-mode sass-mode rvm ruby-tools ruby-test-mode rubocop rspec-mode robe reveal-in-osx-finder restart-emacs rbenv rake rainbow-delimiters pug-mode popwin phpunit phpcbf php-extras php-auto-yasnippets persp-mode pcre2el pbcopy paradox spinner osx-trash osx-dictionary orgit org-projectile org-present org-pomodoro alert log4e gntp org-plus-contrib org-download org-bullets open-junk-file oceanic-theme neotree move-text mmm-mode minitest markdown-toc markdown-mode magit-gitflow macrostep lorem-ipsum linum-relative link-hint less-css-mode launchctl info+ indent-guide hydra hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-gitignore request helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag haml-mode google-translate golden-ratio gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md fuzzy flx-ido flx flatland-theme fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit magit magit-popup git-commit with-editor evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight emmet-mode elisp-slime-nav editorconfig dumb-jump f s drupal-mode php-mode diminish company-web web-completion-data company-statistics company column-enforce-mode clean-aindent-mode chruby bundler inf-ruby bind-map bind-key auto-yasnippet yasnippet auto-highlight-symbol auto-compile packed dash aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core async ac-ispell auto-complete popup base16-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

@@ -58,3 +58,4 @@ alias twt='cd ~/Sites/typewriter/themes'
 
 # Emacs
 alias emc='emacsclient -t -c -a ""'
+alias emg='open -a Emacs'
