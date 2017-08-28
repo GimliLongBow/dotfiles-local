@@ -10,8 +10,9 @@ set guioptions+=c
 " Set font
 if has("gui_running")
   set macligatures
-  set guifont=Hasklig:h13
-  colorscheme OceanicNext
+  set guifont=Hasklig:h14
+  " colorscheme OceanicNext
+  " colorscheme gruvbox
   set background=dark
 endif
 

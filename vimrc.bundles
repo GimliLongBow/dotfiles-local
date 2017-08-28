@@ -89,5 +89,6 @@ Plug 'jordwalke/flatlandia'
 Plug 'morhetz/gruvbox'
 Plug 'chriskempson/base16-vim'
 Plug 'mhartington/oceanic-next'
+Plug 'sjl/badwolf'
 
 call plug#end()

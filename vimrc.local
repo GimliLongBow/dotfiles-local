@@ -39,6 +39,7 @@ let g:ctrlp_abbrev = {
     \ },
     \ ]
   \ }
+let g:ctrlp_match_window = 'bottom,order:ttb'
 
 " Use the OS X clipboard.
 set clipboard=unnamed

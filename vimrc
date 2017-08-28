@@ -158,8 +158,9 @@ set diffopt+=vertical
 " Theme
 syntax enable
 set t_Co=256
-colorscheme OceanicNext
+colorscheme base16-gruvbox-dark-medium
 set background=dark
+let base16colorspace=256
 
 " set nofoldenable                " disable code folding
 
