@@ -85,10 +85,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 "Plug 'mbbill/undotree'
 
 " Themes
-Plug 'jordwalke/flatlandia'
-Plug 'morhetz/gruvbox'
 Plug 'chriskempson/base16-vim'
-Plug 'mhartington/oceanic-next'
-Plug 'sjl/badwolf'
+Plug 'ayu-theme/ayu-vim'
 
 call plug#end()

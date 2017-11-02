@@ -88,8 +88,9 @@ endif
 " set textwidth=80
 " set colorcolumn=+1
 
-" Numbers
+" Numbers: current and relative
 set number
+set relativenumber
 " set numberwidth=5
 
 " Tab completion
@@ -151,16 +152,26 @@ set complete+=kspell
 " Always use vertical diffs
 set diffopt+=vertical
 
+" Enable persistent undo
+if has("persistent_undo")
+  set undodir=~/.undodir/
+  set undofile
+endif
+
 " Configure UI
 "set background=dark
 "colorscheme gruvbox
 
 " Theme
 syntax enable
-set t_Co=256
-colorscheme base16-gruvbox-dark-medium
+if (has("termguicolors"))
+  set termguicolors
+endif
+" let base16colorspace=256
+" colorscheme base16-gruvbox-dark-medium
 set background=dark
-let base16colorspace=256
+let ayucolor="mirage"
+colorscheme ayu
 
 " set nofoldenable                " disable code folding
 

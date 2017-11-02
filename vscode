@@ -1,0 +1,38 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "editor.cursorBlinking": "solid",
+    "editor.fontFamily": "Hasklig",
+    "editor.fontSize": 13,
+    "editor.formatOnPaste": true,
+    // "editor.renderLineHighlight": "all",
+    // "editor.lineNumbers": "relative",
+    "editor.tabSize": 2,
+    // "editor.renderWhitespace": "all",
+    "editor.wordWrap": "on",
+    "editor.minimap.enabled": false,
+    "editor.trimAutoWhitespace": true,
+    // "editor.fontLigatures": true,
+    "explorer.openEditors.visible": 0,
+    "files.exclude": {
+        "**/node_modules": true,
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true
+    },
+    "files.trimTrailingWhitespace": true,
+    // "sassFormat.indent": 2,
+    "search.useIgnoreFilesByDefault": true,
+    "workbench.iconTheme": "vs-seti",
+    "workbench.colorTheme": "Dracula",
+    "workbench.statusBar.visible": false,
+    "workbench.activityBar.visible": false,
+    "vim.leader": "<space>",
+    "vim.disableAnnoyingNeovimMessage": true,
+    "vim.useSystemClipboard": true,
+    "vim.easymotion": true,
+    "workbench.startupEditor": "newUntitledFile",
+    // "workbench.editor.enablePreview": false,
+    // "workbench.editor.showTabs": false
+}
