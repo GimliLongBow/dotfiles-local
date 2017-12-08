@@ -54,6 +54,8 @@ alias gpatch='git add -p'
 
 # Typewriter
 alias tw='cd ~/Sites/typewriter-2'
+alias twbt='cd ~/Sites/typewriter-base-theme'
+alias tw1='cd ~/Sites/typewriter'
 alias twt='cd ~/Sites/typewriter/themes'
 
 # Emacs

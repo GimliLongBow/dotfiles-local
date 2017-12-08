@@ -1,0 +1,47 @@
+nmap     <Leader>ff <Plug>CtrlSFPrompt
+vmap     <Leader>ff <Plug>CtrlSFVwordPath
+vmap     <Leader>fF <Plug>CtrlSFVwordExec
+nmap     <Leader>fn <Plug>CtrlSFCwordPath
+nmap     <Leader>fp <Plug>CtrlSFPwordPath
+nnoremap <Leader>fo :CtrlSFOpen<CR>
+nnoremap <Leader>ft :CtrlSFToggle<CR>
+inoremap <Leader>ft <Esc>:CtrlSFToggle<CR>
+
+" Tab completion
+" will insert tab at beginning of line,
+" will use completion if not at beginning
+set wildmode=list:longest,list:full
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-p>"
+    endif
+endfunction
+inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <S-Tab> <c-n>
+
+" Switch between the last two files
+nnoremap <Leader><Tab> <c-^>
+nnoremap <Leader>bn :bn<CR>
+nnoremap <Leader>bp :bp<CR>
+
+" Other buffer management stuff:
+
+" Get off my lawn
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
+
+" vim-test mappings
+"nnoremap <silent> <Leader>t :TestFile<CR>
+"nnoremap <silent> <Leader>s :TestNearest<CR>
+"nnoremap <silent> <Leader>l :TestLast<CR>
+"nnoremap <silent> <Leader>a :TestSuite<CR>
+"nnoremap <silent> <leader>gt :TestVisit<CR>
+
+" Run commands that require an interactive shell
+nnoremap <Leader>r :RunInInteractiveShell<space>
+
