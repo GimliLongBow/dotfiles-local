@@ -16,9 +16,9 @@ set autowrite     " Automatically :write before running commands
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
-if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
-  syntax on
-endif
+"if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
+"  syntax on
+"endif
 
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
@@ -35,22 +35,22 @@ endif
 
 filetype plugin indent on
 
-augroup vimrcEx
-  autocmd!
+" augroup vimrcEx
+"  autocmd!
 
   " When editing a file, always jump to the last known cursor position.
   " Don't do it for commit messages, when the position is invalid, or when
   " inside an event handler (happens when dropping a file on gvim).
-  autocmd BufReadPost *
-    \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
-    \   exe "normal g`\"" |
-    \ endif
+"  autocmd BufReadPost *
+"    \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
+"    \   exe "normal g`\"" |
+"    \ endif
 
   " Set syntax highlighting for specific file types
-  autocmd BufRead,BufNewFile Appraisals set filetype=ruby
-  autocmd BufRead,BufNewFile *.md set filetype=markdown
-  autocmd BufRead,BufNewFile .{jscs,jshint,eslint}rc set filetype=json
-augroup END
+"  autocmd BufRead,BufNewFile Appraisals set filetype=ruby
+"  autocmd BufRead,BufNewFile *.md set filetype=markdown
+"  autocmd BufRead,BufNewFile .{jscs,jshint,eslint}rc set filetype=json
+"augroup END
 
 " When the type of shell script is /bin/sh, assume a POSIX-compatible
 " shell for syntax highlighting purposes.
@@ -137,17 +137,17 @@ if (has("termguicolors"))
 endif
 " let base16colorspace=256
 " colorscheme base16-gruvbox-dark-medium
+" colorscheme onedark
 set background=dark
-let ayucolor="mirage"
-colorscheme ayu
+colorscheme stellarized_dark
 
 " set nofoldenable                " disable code folding
 
 " iTerm2
-if $TERM_PROGRAM =~ "iTerm"
-  let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
-  let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
-endif
+"if $TERM_PROGRAM =~ "iTerm"
+"  let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
+"  let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
+"endif
 
 " Disable column and fixed column width
 set textwidth=0

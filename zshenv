@@ -12,6 +12,10 @@ export PATH="$HOME/.bin:$HOME/bin:$HOME/.rbenv/bin:/usr/local/heroku/bin:/usr/lo
 # 256
 export TERM="xterm-256color"
 
-#export PATH="/usr/local/opt/node@4/bin:$PATH"
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+export PATH="/usr/local/opt/node@8/bin:$PATH"
+
+autoload -Uz compinit && compinit
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
 

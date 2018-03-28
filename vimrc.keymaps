@@ -1,3 +1,4 @@
+" File finding.
 nmap     <Leader>ff <Plug>CtrlSFPrompt
 vmap     <Leader>ff <Plug>CtrlSFVwordPath
 vmap     <Leader>fF <Plug>CtrlSFVwordExec
@@ -6,6 +7,9 @@ nmap     <Leader>fp <Plug>CtrlSFPwordPath
 nnoremap <Leader>fo :CtrlSFOpen<CR>
 nnoremap <Leader>ft :CtrlSFToggle<CR>
 inoremap <Leader>ft <Esc>:CtrlSFToggle<CR>
+
+" Fuzzy finding
+nmap <Leader>pf :CtrlP<CR>
 
 " Tab completion
 " will insert tab at beginning of line,
@@ -26,6 +30,7 @@ inoremap <S-Tab> <c-n>
 nnoremap <Leader><Tab> <c-^>
 nnoremap <Leader>bn :bn<CR>
 nnoremap <Leader>bp :bp<CR>
+nnoremap <Leader>bd :bp\|bd #<CR>
 
 " Other buffer management stuff:
 
@@ -45,3 +50,25 @@ nnoremap <Down> :echoe "Use j"<CR>
 " Run commands that require an interactive shell
 nnoremap <Leader>r :RunInInteractiveShell<space>
 
+" NERDTree
+map <Leader>bt :NERDTreeToggle<CR>
+
+" Window Splits
+map <Leader>w= <C-w>=
+map <Leader>wd :hide<CR>
+map <Leader>wT <C-w>T
+
+" Split navigation:
+nmap <Leader>wh   <C-W><C-H>
+nmap <Leader>wl   <C-W><C-L>
+nmap <Leader>wk   <C-W><C-K>
+nmap <Leader>wj   <C-W><C-J>
+
+" Open new splits
+nmap <Leader>wH   :leftabove  vnew<CR>
+nmap <Leader>wL   :rightbelow vnew<CR>
+nmap <Leader>wK   :leftabove  new<CR>
+nmap <Leader>wJ   :rightbelow new<CR>
+
+" Comments
+nmap <Leader>cl    :TComment<CR>

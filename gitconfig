@@ -17,6 +17,7 @@
   autocrlf = input
 [merge]
   ff = only
+	tool = opendiff
 [commit]
   template = ~/.gitmessage
 [fetch]

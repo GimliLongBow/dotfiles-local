@@ -2,56 +2,33 @@ if &compatible
   set nocompatible
 end
 
-" Shim command and function to allow migration from Vundle to vim-plug.
-function! VundleToPlug(vundle_command, arg, ...)
-  echom "You are using Vundle's `".a:vundle_command."` command to declare plugins. Dotfiles now uses vim-plug for plugin management. Please rename uses of `".a:vundle_command."` to `Plug`. Plugin was '".a:arg."'."
-  let vim_plug_options = {}
-
-  if a:0 > 0
-    if has_key(a:1, 'name')
-      let name = a:1.name
-      let vim_plug_options.dir = "$HOME/.vim/bundle/".a:1.name
-    endif
-
-    if has_key(a:1, 'rtp')
-      let vim_plug_options.rtp = a:1.rtp
-    endif
-  endif
-
-  Plug a:arg, vim_plug_options
-endfunction
-
-com! -nargs=+  -bar Plugin call VundleToPlug("Plugin", <args>)
-com! -nargs=+  -bar Bundle call VundleToPlug("Bundle", <args>)
-
 call plug#begin('~/.vim/bundle')
 
-" Core stuff:
-Plug 'christoomey/vim-run-interactive'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'janko-m/vim-test'
-Plug 'pbrisbin/vim-mkdir'
-"Plug 'scrooloose/syntastic'
+" The Pope Stuff
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-eunuch'
-"Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rhubarb'
-Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-"Plug 'tpope/vim-projectionist'
-Plug 'tpope/vim-vinegar'
-Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree'
-Plug 'haya14busa/incsearch.vim'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-"Plug 'myusuf3/numbers.vim'
+
+"Plug 'christoomey/vim-run-interactive'
+Plug 'editorconfig/editorconfig-vim'
+"Plug 'janko-m/vim-test'
+"Plug 'pbrisbin/vim-mkdir'
+"Plug 'scrooloose/syntastic'
+"Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-projectionist'
+ Plug 'tpope/vim-vinegar'
+ Plug 'tomtom/tcomment_vim'
+ Plug 'scrooloose/nerdtree'
+ Plug 'haya14busa/incsearch.vim'
+ Plug 'terryma/vim-multiple-cursors'
+ Plug 'vim-airline/vim-airline'
+ Plug 'vim-airline/vim-airline-themes'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'easymotion/vim-easymotion'
+" Plug 'easymotion/vim-easymotion'
 Plug 'dyng/ctrlsf.vim'
 
 " Languages:
@@ -59,34 +36,27 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rake'
 Plug 'tpope/vim-bundler'
-Plug 'elixir-lang/vim-elixir'
-Plug 'slashmili/alchemist.vim'
-Plug 'c-brenn/phoenix.vim'
+"Plug 'elixir-lang/vim-elixir'
+"Plug 'slashmili/alchemist.vim'
+"Plug 'c-brenn/phoenix.vim'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'jelera/vim-javascript-syntax'
-Plug 'othree/javascript-libraries-syntax.vim'
+" Plug 'othree/javascript-libraries-syntax.vim'
+" Plug 'w0rp/ale'
 
-" Spacevim core
-"Plug 'ctjhoa/spacevim'
-"Plug 'hecal3/vim-leader-guide'
-"Plug 'kana/vim-arpeggio'
-"Plug 'mhinz/vim-startify'
-""Plug 'osyo-manga/vim-over'
-"Plug 'Raimondi/delimitMate'
-"Plug 'sheerun/vim-polyglot'
-
-" More Space
+" Fuzzy Finding
 Plug 'ctrlpvim/ctrlp.vim'
-"Plug 'moll/vim-bbye'
-"Plug 'dbakker/vim-projectroot'
-"Plug 'pelodelfuego/vim-swoop'
-"Plug 'airblade/vim-gitgutter'
-"Plug 'junegunn/gv.vim'
-"Plug 'mbbill/undotree'
 
 " Themes
-Plug 'chriskempson/base16-vim'
-Plug 'ayu-theme/ayu-vim'
+" Plug 'chriskempson/base16-vim'
+" Plug 'ayu-theme/ayu-vim'
+" Plug 'fcpg/vim-fahrenheit'
+" Plug 'AlessandroYorba/Alduin'
+Plug 'joshdick/onedark.vim'
+Plug 'nightsense/stellarized'
+
+" Fullscreen
+Plug 'lambdalisue/vim-fullscreen'
 
 call plug#end()

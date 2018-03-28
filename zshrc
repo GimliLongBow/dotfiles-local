@@ -2,7 +2,8 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="bullet-train"
+# ZSH_THEME="bullet-train"
+ZSH_THEME="spaceship"
 plugins=(brew extract zsh-syntax-highlighting)
 COMPLETION_WAITING_DOTS="true"
 source $ZSH/oh-my-zsh.sh
@@ -30,3 +31,5 @@ BULLETTRAIN_PROMPT_ORDER=(
   git
 )
 BULLETTRAIN_DIR_EXTENDED=0
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
