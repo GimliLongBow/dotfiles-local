@@ -1,3 +1,7 @@
+" Easily edit the vimrc.
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
 " File finding.
 nmap     <Leader>ff <Plug>CtrlSFPrompt
 vmap     <Leader>ff <Plug>CtrlSFVwordPath

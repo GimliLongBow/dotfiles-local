@@ -1,5 +1,9 @@
+if &compatible
+  set nocompatible
+end
+
 " Leader
-" let mapleader = ""
+let mapleader = ","
 
 set backspace=2   " Backspace deletes like most programs in insert mode
 set nobackup
