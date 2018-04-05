@@ -14,15 +14,6 @@ source $ZSH/oh-my-zsh.sh
 # Enable Grunt autocompletion.
 #eval "$(grunt --completion=zsh)"
 
-# rbenv!!!
-eval "$(rbenv init -)"
-
-# asdf
-#autoload bashcompinit
-#bashcompinit
-#. $HOME/.asdf/asdf.sh
-#. $HOME/.asdf/completions/asdf.bash
-
 # Bullet Train Config:
 BULLETTRAIN_PROMPT_ORDER=(
   time
@@ -33,3 +24,7 @@ BULLETTRAIN_PROMPT_ORDER=(
 BULLETTRAIN_DIR_EXTENDED=0
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Set Spaceship ZSH as a prompt
+autoload -U promptinit; promptinit
+prompt spaceship

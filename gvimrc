@@ -10,7 +10,7 @@ set guioptions+=c
 " Set font
 if has("gui_running")
   set macligatures
-  set guifont=Fira\ Code:h13
+  set guifont=FiraCode\ Nerd\ Font:h14
   " colorscheme OceanicNext
   " colorscheme gruvbox
   set background=dark
