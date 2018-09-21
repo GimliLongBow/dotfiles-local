@@ -40,17 +40,14 @@ Plug 'cakebaker/scss-syntax.vim'
 Plug 'jelera/vim-javascript-syntax'
 " Plug 'othree/javascript-libraries-syntax.vim'
 " Plug 'w0rp/ale'
+Plug 'mattn/emmet-vim'
 
 " Fuzzy Finding
 Plug 'ctrlpvim/ctrlp.vim'
 
 " Themes
-" Plug 'chriskempson/base16-vim'
-" Plug 'ayu-theme/ayu-vim'
-" Plug 'fcpg/vim-fahrenheit'
-" Plug 'AlessandroYorba/Alduin'
-Plug 'joshdick/onedark.vim'
 Plug 'nightsense/stellarized'
+Plug 'drewtempelmeyer/palenight.vim'
 
 " Fullscreen
 Plug 'lambdalisue/vim-fullscreen'

@@ -4,7 +4,7 @@ ZSH=$HOME/.oh-my-zsh
 
 # ZSH_THEME="bullet-train"
 ZSH_THEME="spaceship"
-plugins=(brew extract zsh-syntax-highlighting)
+plugins=(brew extract zsh-syntax-highlighting zsh-iterm-touchbar)
 COMPLETION_WAITING_DOTS="true"
 source $ZSH/oh-my-zsh.sh
 
@@ -23,8 +23,10 @@ BULLETTRAIN_PROMPT_ORDER=(
 )
 BULLETTRAIN_DIR_EXTENDED=0
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # Set Spaceship ZSH as a prompt
 autoload -U promptinit; promptinit
 prompt spaceship
+
+
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash

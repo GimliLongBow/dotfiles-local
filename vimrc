@@ -131,19 +131,15 @@ if has("persistent_undo")
 endif
 
 " Configure UI
-"set background=dark
-"colorscheme gruvbox
 
 " Theme
 syntax enable
 if (has("termguicolors"))
   set termguicolors
 endif
-" let base16colorspace=256
-" colorscheme base16-gruvbox-dark-medium
-" colorscheme onedark
+" Base16 integration
 set background=dark
-colorscheme stellarized_dark
+colorscheme palenight
 
 " set nofoldenable                " disable code folding
 

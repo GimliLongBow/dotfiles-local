@@ -51,6 +51,7 @@ alias gf='git fetch'
 alias gp='git push'
 alias gamend='git commit --amend --no-edit'
 alias gpatch='git add -p'
+alias grepush='git pull --rebase && git push'
 
 # Typewriter
 alias tw='cd ~/Sites/typewriter-2'
