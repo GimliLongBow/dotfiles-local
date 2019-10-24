@@ -45,6 +45,7 @@ alias ga='git add'
 alias gc='git commit'
 alias gb='git branch'
 alias gbc='git checkout -b'
+alias gco='git checkout'
 alias gd='git diff'
 alias gl='git pull'
 alias gf='git fetch'
@@ -62,3 +63,10 @@ alias twt='cd ~/Sites/typewriter/themes'
 # Emacs
 alias emc='emacsclient -t -c -a ""'
 alias emg='open -a Emacs'
+
+# Go
+alias goh='/Users/andrew/go/'
+
+# Docker
+alias docker_clean_images='docker rmi $(docker images -a --filter=dangling=true -q)'
+alias docker_clean_ps='docker rm $(docker ps --filter=status=exited --filter=status=created -q)'
