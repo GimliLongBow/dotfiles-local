@@ -1,0 +1,36 @@
+Host *
+ AddKeysToAgent yes
+ UseKeychain yes
+ IdentitiesOnly yes
+ IdentityFile ~/.ssh/id_rsa
+
+Host rd-aws
+  HostName ec2-54-165-5-91.compute-1.amazonaws.com
+  User openvpnas
+  IdentityFile ~/.ssh/rd_hosting.pem
+
+Host adk-schedule
+  HostName 54.224.58.19
+  User ubuntu
+  IdentityFile ~/.ssh/LightsailDefaultPrivateKey.pem
+
+Host mce-aws
+  HostName 192.168.75.110
+  User ubuntu
+  IdentityFile ~/.ssh/MCELinux.pem
+
+Host memcached
+  HostName 10.0.1.38
+  User ubuntu
+  IdentityFile ~/.ssh/rd_hosting.pem
+
+Host aws-combine
+  HostName git-codecommit.us-east-1.amazonaws.com
+  User APKAI7DNU5RWXDXWDLMA
+  IdentityFile ~/.ssh/codecommit_rsa
+
+Host aws-army
+  HostName git-codecommit.us-east-1.amazonaws.com
+  User APKA6CVU5QLWZLY5K7Z3
+  IdentityFile ~/.ssh/codecommit_army_rsa
+
